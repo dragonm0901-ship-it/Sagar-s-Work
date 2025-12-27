@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Luitel - Vibe Coder & Tech Enthusiast</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 3D Prompt Cloud Overlay -->
+    <div id="prompt-cloud-canvas"></div>
+
+    <!-- Copy Notification -->
+    <div id="copy-toast" class="toast">Prompt Copied!</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Sagar.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#projects" class="btn btn-primary btn-pill">View Work</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-text">SAGAR</div>
+        <div class="hero-glow"></div>
+
+        <!-- 3D Container -->
+        <div id="hero-3d-container" class="hero-orb"></div>
+
+        <div class="hero-content">
+            <h1>Hi, I'm Sagar.<br><span class="text-gradient">I Vibe Code.</span></h1>
+            <p class="typing-text">Tech Enthusiast | Full Stack Developer | AI Explorer</p>
+            <div class="button-group">
+                <a href="#projects" class="btn btn-primary btn-icon">
+                    <span>See My Projects</span>
+                    <div class="icon-circle"><i class="ph-fill ph-arrow-right"></i></div>
+                </a>
+                <a href="https://github.com/dragonm0901-ship-it" target="_blank" class="btn btn-secondary btn-icon">
+                    <span>Github</span>
+                    <div class="icon-circle"><i class="ph-fill ph-github-logo"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container grid-2-col">
+            <div class="visual-content">
+                <!-- Crystal Rubik's Cube -->
+                <div class="crystal-interactive-container">
+                    <div id="crystal-canvas-wrapper" class="crystal-wrapper">
+                        <!-- Three.js will inject canvas here -->
+                    </div>
+                    <div class="slider-control">
+                        <label for="hue-slider">Universe Vibe: <span id="hue-value">Purple</span></label>
+                        <input type="range" id="hue-slider" min="0" max="360" value="260">
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <h2>The Tech Guy</h2>
+                <p class="about-desc">
+                    I don't just write code; I create experiences. As a passionate tech enthusiast, I dive deep into the
+                    latest advancements in AI and web technologies. My "vibe coding" philosophy is about merging
+                    technical precision with creative flow to build intuitive and powerful digital solutions.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">AI/LLMs</span>
+                    <span class="tech-tag">Three.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>A collection of my recent experiments and builds.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-tabs">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="web">Web</button>
+            <button class="tab-btn" data-filter="ai">AI & ML</button>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Project 1 -->
+            <div class="glass-card project-card" data-category="web">
+                <div class="card-icon"><i class="ph ph-laptop"></i></div>
+                <div class="card-content">
+                    <h3>Portfolio V1</h3>
+                    <p>A stunning personal portfolio built with glassmorphism aesthetics and 3D elements.</p>
+                    <div class="card-tags">
+                        <span>HTML/CSS</span>
+                        <span>Design</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn-card">Live Demo</a>
+                    <a href="https://github.com/dragonm0901-ship-it" class="btn-card-icon"><i
+                            class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card project-card" data-category="ai">
+                <div class="card-icon"><i class="ph ph-brain"></i></div>
+                <div class="card-content">
+                    <h3>AI Image Gen</h3>
+                    <p>An integration of Stable Diffusion to generate art from text prompts interactively.</p>
+                    <div class="card-tags">
+                        <span>Python</span>
+                        <span>API</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn-card">View Repo</a>
+                    <a href="https://github.com/dragonm0901-ship-it" class="btn-card-icon"><i
+                            class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card project-card" data-category="web">
+                <div class="card-icon"><i class="ph ph-shopping-cart"></i></div>
+                <div class="card-content">
+                    <h3>E-Commerce Dashboard</h3>
+                    <p>A full-featured admin dashboard for managing products and analyzing sales.</p>
+                    <div class="card-tags">
+                        <span>React</span>
+                        <span>Data Viz</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn-card">Live Demo</a>
+                    <a href="https://github.com/dragonm0901-ship-it" class="btn-card-icon"><i
+                            class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 4 (New Vibe) -->
+            <div class="glass-card project-card" data-category="ai">
+                <div class="card-icon"><i class="ph ph-chat-circle-text"></i></div>
+                <div class="card-content">
+                    <h3>Vibe Chat</h3>
+                    <p>Real-time chat application with sentimental analysis to detect the "vibe" of the room.</p>
+                    <div class="card-tags">
+                        <span>Socket.io</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn-card">View Repo</a>
+                    <a href="https://github.com/dragonm0901-ship-it" class="btn-card-icon"><i
+                            class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <!-- Aurora Canvas Overlay -->
+        <div id="aurora-container" class="aurora-bg"></div>
+
+        <div class="container cat-box-content">
+            <div class="cta-box glass-card">
+                <h2>Let's Build Something <span class="text-gradient">Amazing</span></h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your
+                    visions.</p>
+
+                <div class="cta-controls">
+                    <div class="slider-control modern-wave-slider">
+                        <label for="aurora-slider">Aurora Vibe: <span id="aurora-value">Fluid Blue</span></label>
+                        <input type="range" id="aurora-slider" min="0" max="360" value="180">
+                    </div>
+                    <a href="mailto:contact@example.com" class="btn btn-primary btn-pill">
+                        Start Messaging
+                        <i class="ph-fill ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col brand">
+                <h4 class="logo">Sagar.</h4>
+                <p>Coding with vibe, building for the future.</p>
+                <div class="social-links">
+                    <a href="https://github.com/dragonm0901-ship-it" target="_blank"><i
+                            class="ph ph-github-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <p>hello@sagarluitel.com</p>
+                <p>Kathmandu, Nepal</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sagar Luitel. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
